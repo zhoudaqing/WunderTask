@@ -1,0 +1,230 @@
+//
+//  iOSFinancial-Prefix.pch
+//  iOSFinancial
+//
+//  Created by Mr.Yang on 15/3/27.
+//  Copyright (c) 2015年 Mr.Yang. All rights reserved.
+//
+
+#ifndef iOSFinancial_iOSFinancial_Prefix_pch
+#define iOSFinancial_iOSFinancial_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "UIColor+HTExtension.h"
+#import "UIView+BFExtension.h"
+#import "NSString+BaseURL.h"
+#import "Sundry.h"
+#import "User.h"
+#import "HTBaseRequest.h"
+#import "NSDictionary+JSONExtern.h"
+
+
+
+/*--------------------------- 全局变量 ---------------------------*/
+
+#ifdef DEBUG
+
+    #define __APP_CHANNEL   @"ios_test"
+
+#else
+
+    #define __APP_CHANNEL   @"appstore"
+
+#endif
+
+
+//  短信发送方0或者1，分别为建州科技或推立方
+#define __SMS_CHANNEL      0
+
+//  距离屏幕上方的高度
+#define TransparentTopHeight        0 //64
+
+//  用户登陆过期时间 (分钟)
+#define __UserLoginOutTimeInterval  3
+
+//-------------Tabbar索引
+
+//  账户在tabbar上的索引号
+#define __UserAccountIndex          2
+
+//  更多页面的索引号
+#define __MoreSettingIndex          3
+
+//--------------网络请求 (错误号)
+
+//  用户被别人
+#define __UserAccoutIsLoginByOther  -5
+
+//  用户token过期
+#define __UserAccessTokenOutDate    -2
+
+//  Bug管理 (腾讯bugly)
+#define __BUGLY_APP_ID      @"900003742"
+
+#define __Globle_line_width  .3f
+
+//---------------项目类型
+
+typedef NS_ENUM(NSInteger, LoanType) {
+    //  安心
+    LoanTypeAnXin = 1,
+    //  动心
+    LoanTypeDongXin = 2,
+    //  省心
+    LoanTypeShengXin = 3,
+    //  桥接
+    LoanTypeYinQi = 6
+};
+
+typedef NS_ENUM(NSInteger, ReturnCyleType) {
+    //  按天算的项目
+    ReturnCyleTypeDay,
+    //  按月算得项目
+    ReturnCyleTypeMonth
+};
+
+/*-------------------------- 投资类型 ---------------------------*/
+
+
+//  等额本息 1
+static NSString *const kRepayType_Denge     =  @"等额本息";
+//  按月反息，到期还本 3
+static NSString *const kRepayType_PerMonth  =  @"按月返息到期还本";
+//  到期还本付息 2
+static NSString *const kRepayType_End       =  @"到期还本付息";
+
+//------------------ 更多
+
+//  客服电话
+static NSString *const kServicePhone    =    @"4006565716";
+
+//  电话显示格式
+static NSString *const kServicePhone_f  =    @"400-6565-716";
+
+//  微信公众账号
+static NSString *const kWeiChatPublic   =    @"jiandanlicaiwang";
+
+//  网站
+static NSString *const kWebServiceURL   =    @"https://www.jiandanlicai.com";
+static NSString *const kWebServiceURL_f =    @"www.jiandanlicai.com";
+
+//  简单理财网服务协议 地址
+static NSString *const kRegeitProtocal1 =    @"https://m.jiandanlicai.com/page/agreement/1";
+
+//  简单理财网投资信息咨询与管理协议 地址
+static NSString *const kRegeitProtocal2  =    @"https://m.jiandanlicai.com/page/agreement/2";
+
+//  简单理财网资金管理规定 地址
+static NSString *const kRegeitProtocal3  =    @"https://m.jiandanlicai.com/page/agreement/3";
+
+//  充值限额规则 (待修改)
+static NSString *const kRechargeProtocal4 =    @"https://m.jiandanlicai.com/page/agreement/4";
+
+//  债权转让协议
+static NSString *const kRegeitProtocal5  =    @"https://m.jiandanlicai.com/page/agreement/5";
+
+//  余额生息计息规则 (暂时没用)
+static NSString *const kBalanceProtocal  =    @"https://jiandanlicai.com";
+
+
+/*----------------手势键盘密码的KEY值--------------------------*/
+
+#define UMengShareAppKey   @"54f52161fd98c52c280001a0"
+#define QQAppId            @"1103996144"
+#define QQAppKey           @"oAU4rGCv0WoFubsd"
+#define WeiXinAppKey       @"wx4483dbf9915bd984"
+#define WeiXinAppSecreat   @"0e1995460b92265e1ee13a09e096a060"
+
+/*-----------------NOTIFACTION DEFINE----------------------*/
+
+//  登录成功
+#define __USER_LOGIN_SUCCESS          @"__userLoginSucess"
+
+//  退出登录成功
+#define __USER_LOGINOUT_SUCCESS       @"__userLoginOutSuccess"
+
+//  输入手势成功
+#define __USER_INPUT_GESURE_SUCCESS    @"__userInputGestureSuccess"
+
+//  设置手势成功
+#define __USER_SET_GESTURE_SUCCESS      @"__userSetGestureSucccess"
+
+//  用户AK过期
+#define __USER_ACCESSTOKEN_OUTDATE      @"__userAccess_Token_Out_date"
+
+//  刷新个人账户
+#define __USER_ACCOUNT_REFRESH_NOTIFACTION      @"__user_account_refresh_notifiction"
+
+//  刷新更多页面(更新认证中的状态)
+#define __USER_INFOMATION_REFRESH_NOTIFACTION   @"__user_infomation_refresh_notification"
+
+
+/*--------------COMMON FUNCTION-----------------*/
+
+static inline BOOL isEmpty(id thing) {
+    return thing == nil || [thing isEqual:[NSNull null]]
+    || ([thing respondsToSelector:@selector(length)]
+        && [(NSData *)thing length] == 0)
+    || ([thing respondsToSelector:@selector(count)]
+        && [(NSArray *)thing count] == 0);
+}
+
+#define APPScreenFrame      [[UIScreen mainScreen] applicationFrame]
+#define APPScreenWidth      APPScreenFrame.size.width
+#define APPScreenHeight     APPScreenFrame.size.height
+#define RealScreenHeight    [UIScreen mainScreen].bounds.size.height
+
+#define APPKeyWindow        [UIApplication sharedApplication].keyWindow
+
+#define is35Inch   ((NSInteger)RealScreenHeight == 480 ? YES : NO)
+#define is4Inch   ((NSInteger)RealScreenHeight == 568 ? YES : NO)
+#define is47Inch  ((NSInteger)RealScreenHeight == 667 ? YES : NO)
+#define is55Inch  ((NSInteger)RealScreenHeight == 736 ? YES : NO)
+
+#define APPSystemVersion        [[[UIDevice currentDevice] systemVersion] intValue]
+#define HTImage(__name)         [UIImage imageNamed:__name]
+#define HTSTR(...)              [NSString stringWithFormat:__VA_ARGS__]
+#define HTURL(__str)            [NSURL URLWithString:__str]
+
+#define HTUserDefaults          [NSUserDefaults standardUserDefaults]
+#define HTFont(__fontSize)      [UIFont systemFontOfSize:__fontSize]
+
+#define Color255ToCGColor(x)   ((x) / 255.0)
+#define RGBCOLOR(r, g, b)   [UIColor colorWithRed:Color255ToCGColor(r) green:Color255ToCGColor(g) blue:Color255ToCGColor(b) alpha:1.0]
+
+#define __weakSelf              __weak typeof(self) weakSelf = self
+
+
+
+/**
+ *  if undefined DEBUG or DEBUG is 0 then disabled log
+ *
+ *  if DEBUG == 1 LogWarning is enabled
+ *
+ *  if DEBUG > 1 LogError ie enabled
+ */
+
+
+#if !defined(DEBUG) || DEBUG == 0
+#define NSLog(...) do {} while (0)
+#define DLog(fmt, ...)
+
+#elif DEBUG == 1
+
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+#endif
+
+
+#endif
+
+
+#endif

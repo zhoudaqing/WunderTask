@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FlickerView">
+            <rect key="frame" x="0.0" y="0.0" width="248" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="LmQ-Y7-oVD">
+                    <rect key="frame" x="0.0" y="0.0" width="248" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="3h7-Ab-NIT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmr-uc-BH2">
+                    <rect key="frame" x="0.0" y="16" width="248" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ekh-72-ld0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ekh-72-ld0"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LmQ-Y7-oVD" secondAttribute="trailing" id="I5Z-xC-CDL"/>
+                <constraint firstAttribute="bottom" secondItem="Rmr-uc-BH2" secondAttribute="bottom" id="TgJ-zo-d4c"/>
+                <constraint firstItem="LmQ-Y7-oVD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UxP-Hn-Cg3"/>
+                <constraint firstItem="Rmr-uc-BH2" firstAttribute="top" secondItem="LmQ-Y7-oVD" secondAttribute="bottom" id="Vmb-hZ-DIL"/>
+                <constraint firstItem="Rmr-uc-BH2" firstAttribute="top" secondItem="LmQ-Y7-oVD" secondAttribute="bottom" constant="10" id="ZvU-wR-nXG"/>
+                <constraint firstAttribute="trailing" secondItem="Rmr-uc-BH2" secondAttribute="trailing" id="b6P-8b-rM6"/>
+                <constraint firstItem="Rmr-uc-BH2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jU3-su-i9e"/>
+                <constraint firstItem="LmQ-Y7-oVD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jbh-qF-oJb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ZvU-wR-nXG"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="numberLabel" destination="LmQ-Y7-oVD" id="awZ-Wc-5Bt"/>
+                <outlet property="titleLabel" destination="Rmr-uc-BH2" id="GuU-Z1-YLp"/>
+            </connections>
+            <point key="canvasLocation" x="374" y="226"/>
+        </view>
+    </objects>
+</document>

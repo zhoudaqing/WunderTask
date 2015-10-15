@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InvesetMoneyView">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="111"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaC-HP-a19" userLabel="backView">
+                    <rect key="frame" x="15" y="38" width="321" height="38"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入投资金额" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fd8-Rv-Idi">
+                            <rect key="frame" x="6" y="6" width="309" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="rsr-hH-z30"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="rsr-hH-z30"/>
+                                </mask>
+                            </variation>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.70884524110000002" green="1" blue="0.55062362570000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Fd8-Rv-Idi" secondAttribute="bottom" constant="6" id="3Ik-GY-gXd"/>
+                        <constraint firstAttribute="trailing" secondItem="Fd8-Rv-Idi" secondAttribute="trailing" constant="6" id="Hao-ag-qRu"/>
+                        <constraint firstAttribute="height" constant="38" id="KqT-tT-Rr1"/>
+                        <constraint firstItem="Fd8-Rv-Idi" firstAttribute="leading" secondItem="OaC-HP-a19" secondAttribute="leading" constant="6" id="P8y-Qk-hyy"/>
+                        <constraint firstItem="Fd8-Rv-Idi" firstAttribute="top" secondItem="OaC-HP-a19" secondAttribute="top" constant="6" id="frh-tW-OR0"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可用余额：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Va-Yb-Ts2">
+                    <rect key="frame" x="15" y="10" width="70" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="NDQ-B8-MGw"/>
+                        <constraint firstAttribute="width" constant="70" id="elt-n5-evF"/>
+                        <constraint firstAttribute="height" constant="20" id="jKt-XW-nDQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="jKt-XW-nDQ"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOP-kS-qvG">
+                    <rect key="frame" x="81" y="10" width="169" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="gsq-zA-exT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwb-rZ-ITT">
+                    <rect key="frame" x="267" y="4" width="69" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="69" id="niw-vM-hK7"/>
+                    </constraints>
+                    <state key="normal" title="充值">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="rechargeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="cUn-ot-hcv"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预期收益：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfE-nP-T2h">
+                    <rect key="frame" x="15" y="84" width="70" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="9NW-6s-2eo"/>
+                        <constraint firstAttribute="height" constant="20" id="CvQ-y7-ej3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV7-Pi-fth">
+                    <rect key="frame" x="81" y="84" width="248" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Fum-RB-DB8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dOP-kS-qvG" firstAttribute="leading" secondItem="9Va-Yb-Ts2" secondAttribute="trailing" constant="-4" id="0bA-xl-j9z"/>
+                <constraint firstItem="iwb-rZ-ITT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="0p0-k7-69l"/>
+                <constraint firstAttribute="trailing" secondItem="dV7-Pi-fth" secondAttribute="trailing" constant="22" id="1mQ-rl-UB3"/>
+                <constraint firstItem="dOP-kS-qvG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3AU-gE-iSK"/>
+                <constraint firstItem="9Va-Yb-Ts2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="8L6-uH-TT3"/>
+                <constraint firstItem="dOP-kS-qvG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="8dN-0I-iVt"/>
+                <constraint firstItem="9Va-Yb-Ts2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="D57-VC-239"/>
+                <constraint firstItem="OaC-HP-a19" firstAttribute="top" secondItem="iwb-rZ-ITT" secondAttribute="bottom" constant="8" id="G9r-mK-bGd"/>
+                <constraint firstAttribute="trailing" secondItem="iwb-rZ-ITT" secondAttribute="trailing" constant="15" id="HaU-40-I4y"/>
+                <constraint firstItem="dV7-Pi-fth" firstAttribute="top" secondItem="SfE-nP-T2h" secondAttribute="top" id="Ibo-uP-QnF"/>
+                <constraint firstItem="dOP-kS-qvG" firstAttribute="top" secondItem="9Va-Yb-Ts2" secondAttribute="top" id="JyN-e3-1nS"/>
+                <constraint firstItem="9Va-Yb-Ts2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Q6M-v2-Slx"/>
+                <constraint firstItem="OaC-HP-a19" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="SQh-J1-lKa"/>
+                <constraint firstItem="SfE-nP-T2h" firstAttribute="top" secondItem="OaC-HP-a19" secondAttribute="bottom" constant="8" id="SdV-r7-eBA"/>
+                <constraint firstItem="dV7-Pi-fth" firstAttribute="top" secondItem="OaC-HP-a19" secondAttribute="bottom" constant="8" id="W9T-co-7Al"/>
+                <constraint firstItem="SfE-nP-T2h" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="jRJ-i3-Kx0"/>
+                <constraint firstItem="OaC-HP-a19" firstAttribute="top" secondItem="9Va-Yb-Ts2" secondAttribute="bottom" constant="8" id="kRk-fX-V4b"/>
+                <constraint firstAttribute="trailing" secondItem="OaC-HP-a19" secondAttribute="trailing" constant="15" id="kjN-i0-XVs"/>
+                <constraint firstItem="dV7-Pi-fth" firstAttribute="leading" secondItem="SfE-nP-T2h" secondAttribute="trailing" constant="-4" id="oUb-Gn-yLW"/>
+                <constraint firstItem="dV7-Pi-fth" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="qQM-yP-XYu"/>
+                <constraint firstItem="iwb-rZ-ITT" firstAttribute="leading" secondItem="dOP-kS-qvG" secondAttribute="trailing" constant="17" id="yMa-gF-XK0"/>
+                <constraint firstItem="dOP-kS-qvG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="zA4-ea-J1s"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Q6M-v2-Slx"/>
+                    <exclude reference="G9r-mK-bGd"/>
+                    <exclude reference="3AU-gE-iSK"/>
+                    <exclude reference="zA4-ea-J1s"/>
+                    <exclude reference="W9T-co-7Al"/>
+                    <exclude reference="qQM-yP-XYu"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="avaliableLabel" destination="9Va-Yb-Ts2" id="W51-dg-f1K"/>
+                <outlet property="avaliableMoney" destination="dOP-kS-qvG" id="Ft5-dm-xUH"/>
+                <outlet property="backGroundView" destination="OaC-HP-a19" id="Fer-1n-cjD"/>
+                <outlet property="investMoney" destination="Fd8-Rv-Idi" id="KTO-HQ-AAG"/>
+                <outlet property="rechargeButton" destination="iwb-rZ-ITT" id="i6k-7U-agV"/>
+                <outlet property="willInComeLabel" destination="SfE-nP-T2h" id="Ugm-X1-lDC"/>
+                <outlet property="willInComeMoney" destination="dV7-Pi-fth" id="MmT-CZ-EaT"/>
+            </connections>
+            <point key="canvasLocation" x="119.5" y="194.5"/>
+        </view>
+    </objects>
+</document>

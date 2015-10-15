@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MyAccountViewController</key>
+	<string>我的账户</string>
+	<key>InvestMentSelectionController</key>
+	<string>我的账户-投资中</string>
+	<key>InvestingTableViewController</key>
+	<string>我的账户-投资中-子页面</string>
+	<key>AccountBalanceViewController</key>
+	<string>我的账户-账户余额</string>
+	<key>TotalIncomeViewController</key>
+	<string>我的账户-累计收益 </string>
+	<key>RedEnvelopeViewController</key>
+	<string>我的账户-红包管理</string>
+	<key>ReturnMoneyViewController</key>
+	<string>我的账户-剩余回款</string>
+	<key>WithdrawBankViewController</key>
+	<string>我的账户-提现银行卡</string>
+	<key>AddCardViewController</key>
+	<string>我的账户-提现银行卡-添加银行卡页面</string>
+	<key>BalanceViewController</key>
+	<string>我的账户-余额生息</string>
+	<key>BalanceRuleViewController</key>
+	<string>我的账户-余额生息-余额生息规则</string>
+	<key>InvitationFriendViewController</key>
+	<string>我的账户-邀请好友</string>
+	<key>RechangeViewController</key>
+	<string>我的账户-充值</string>
+	<key>InvestSelectionViewController</key>
+	<string>理财</string>
+	<key>P2CMarketController</key>
+	<string>理财-理财项目</string>
+	<key>RedeemMarketController</key>
+	<string>理财-债权转让</string>
+	<key>InvestViewController</key>
+	<string>理财-立即投资页面(理财项目和债权转让)</string>
+	<key>InvestMarketDetailController</key>
+	<string>理财-项目详情(理财项目详情页和债权转让详情页)</string>
+	<key>InvestTargetDetailController</key>
+	<string>理财-项目详情-项目信息 </string>
+	<key>WillInvestProjects</key>
+	<string>理财-项目详情-候选项目 </string>
+	<key>MoreViewController</key>
+	<string>更多</string>
+	<key>BindingPhoneNumberTableViewController</key>
+	<string>更多-手机号码绑定页面</string>
+	<key>LogInPasswordTableViewController</key>
+	<string>更多-登录密码修改</string>
+	<key>PayPasswordTableViewController</key>
+	<string>更多-支付密码修改</string>
+	<key>IdeaSendViewController</key>
+	<string>更多-意见反馈</string>
+	<key>AboutUsViewController</key>
+	<string>更多-关于我们</string>
+	<key>HTGestureViewController</key>
+	<string>解锁手势页面</string>
+	<key>LogOrRegViewController</key>
+	<string>登录和注册页面</string>
+	<key>FindPassWordController</key>
+	<string>登录-找回密码</string>
+	<key>AuthCodeViewController</key>
+	<string>注册-短信验证码页面</string>
+	<key>InviterViewController</key>
+	<string>注册-短信验证码页面-邀请人页面</string>
+	<key>HTWebViewController</key>
+	<string>注册协议管理协议服务协议Web页面</string>
+</dict>
+</plist>

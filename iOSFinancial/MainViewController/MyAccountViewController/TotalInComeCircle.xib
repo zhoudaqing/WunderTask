@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TotalInComeCircle">
+            <rect key="frame" x="0.0" y="0.0" width="146" height="179"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-rO-5wn">
+                    <rect key="frame" x="18" y="145" width="111" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Snb-CM-8b4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqO-CV-Bwo" customClass="HTPromptCircle">
+                    <rect key="frame" x="13" y="15" width="120" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="9Io-uW-d2z"/>
+                        <constraint firstAttribute="width" constant="120" id="ZjG-YO-8A3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="cDe-rO-5wn" secondAttribute="centerX" id="4Rd-pP-byR"/>
+                <constraint firstItem="cDe-rO-5wn" firstAttribute="top" secondItem="eqO-CV-Bwo" secondAttribute="bottom" constant="10" id="GBp-75-VGs"/>
+                <constraint firstItem="eqO-CV-Bwo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="YYc-w7-4GA"/>
+                <constraint firstItem="cDe-rO-5wn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="Yr6-cl-HwI"/>
+                <constraint firstAttribute="centerX" secondItem="eqO-CV-Bwo" secondAttribute="centerX" id="bSW-2E-s41"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="persentView" destination="eqO-CV-Bwo" id="GEX-tm-ZpM"/>
+                <outlet property="totalLabel" destination="cDe-rO-5wn" id="aL3-fT-sWy"/>
+            </connections>
+            <point key="canvasLocation" x="324" y="145.5"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
