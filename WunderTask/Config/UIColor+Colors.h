@@ -11,6 +11,12 @@
 
 @interface UIColor (Colors)
 
+/*
+ *  浅灰色 dad9d9
+ */
+
++ (UIColor *)jd_lightGrayColor;
+
 /**
  *  系统背景色
  */

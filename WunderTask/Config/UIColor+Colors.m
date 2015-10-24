@@ -10,9 +10,14 @@
 
 @implementation UIColor (Colors)
 
++ (UIColor *)jd_lightGrayColor
+{
+    return [UIColor colorWithHEX:0xdad9d9];
+}
+
 + (UIColor *)jd_backgroudColor
 {
-    return [UIColor colorWithHEX:0xeeeeee];
+    return [UIColor colorWithHEX:0xf8f8f8];
 }
 
 + (UIColor *)jd_settingDetailColor
@@ -40,7 +45,7 @@
 
 + (UIColor *)jd_lineColor
 {
-    return [UIColor colorWithHEX:0xcccccc];
+    return [UIColor colorWithHEX: 0xe6e6e6];
 }
 
 + (UIColor *)jd_barTintColor

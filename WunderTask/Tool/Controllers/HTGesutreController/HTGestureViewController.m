@@ -10,8 +10,6 @@
 #import "HTGestureView.h"
 #import "HTGestureInditaor.h"
 #import "HTGestureConfig.h"
-#import "LogOrRegViewController.h"
-
 
 
 @interface HTGestureViewController () <HTGestureViewProtocal>
@@ -443,18 +441,12 @@
     
     self.isShowLogin = YES;
     
-    LogOrRegViewController *loginVC = [[LogOrRegViewController alloc] init];
-    [loginVC addHeadBtnType:Login];
-    
     CATransition *transition = [CATransition animation];
     transition.type = @"oglFlip";
     transition.subtype = kCATransitionFromLeft;
     transition.duration = .8;
     transition.timingFunction = UIViewAnimationCurveEaseInOut;
     
-    [self addChildViewController:loginVC];
-    [self.view addSubview:loginVC.view];
-    loginVC.view.frame = self.view.bounds;
     [self.view.layer addAnimation:transition forKey:@"flip"];
 }
 

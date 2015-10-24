@@ -99,7 +99,7 @@
 - (HTBaseViewController *)viewControllerOnScreen
 {
     AppDelegate *sharedApplication = [UIApplication sharedApplication].delegate;
-    UIViewController *rootViewController = sharedApplication.showedViewController.visibleViewController;
+    UIViewController *rootViewController = sharedApplication.tabBarController.selectedViewController;
     
     if ([rootViewController isKindOfClass:[HTNavigationController class]]) {
         rootViewController = ((HTNavigationController *)rootViewController).visibleViewController;

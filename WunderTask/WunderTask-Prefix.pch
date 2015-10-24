@@ -24,7 +24,7 @@
 #import "User.h"
 #import "HTBaseRequest.h"
 #import "NSDictionary+JSONExtern.h"
-
+#import "HTNavigationController.h"
 
 
 /*--------------------------- 全局变量 ---------------------------*/

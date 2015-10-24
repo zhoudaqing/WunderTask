@@ -7,17 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HTNavigationController.h"
+#import "HTTabBarController.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-//  正在显示的Controller
-@property (strong, nonatomic, readonly) HTNavigationController *showedViewController;
-
-- (void)changeTabbarIndex;
+@property (nonatomic)  HTTabBarController *tabBarController;
 
 @end
 
